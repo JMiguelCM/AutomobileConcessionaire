@@ -1,0 +1,177 @@
+:root{
+    --max-width: 1288px;
+    --min-width: 320px;
+    --accent9-color: #00ff95;
+}
+
+*{box-sizing: border-box;}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(161, 0, 0);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color:white;
+}
+
+
+.book-appoiment__header{
+    padding: 1rem 2rem;
+    background-color: var(--accent9-color);
+    border-radius: 2.5px;
+    font-size: 24px;
+}
+
+.container {
+    height: 102.4vh;
+    display: flexbox;
+    flex-direction: column;
+    min-width: var(--min-width);
+    background-image: url(img/ferrari488black.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: background-image .7s ease-in-out;
+}
+
+.header, .content, .footer{
+    width: 100%;
+    margin: 16px auto;
+    padding: 1.3rem;
+    max-width: var(--max-width);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -16px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo img{
+    width: 120px;
+    margin-right: 1rem;
+}
+
+.menu-list{
+    margin: 0;
+}
+
+.menu-list__item{
+    display: inline-block;
+    margin: 0 .5rem;
+    font-size: 20px;
+}
+
+.content{
+    flex-grow: 1;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.slideButton{
+    position: absolute;
+    top:40%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.prevSlide{
+    left: -1rem;
+}
+
+.nextSlide{
+    right: -1rem;
+}
+
+.content__claim{
+    font-size: 50px;
+    color: var(--accent9-color);
+    margin: 0;
+}
+
+.content__subclaim{
+    font-size: 25px;
+    margin: .5rem 0;
+    margin-bottom: 2rem;
+}
+
+.book-appoiment{
+    padding: 1rem 2rem;
+    background-color: var(--accent9-color);
+    border-radius: 2.5px;
+    font-size: 24px;
+}
+
+.container__footer{
+    background-color: rgba(0, 0, 0);
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 9.8rem;
+}
+
+.footer__widget{
+    font-size: 18.5px;
+}
+
+.footer__widget__title{
+    color: var(--accent9-color);
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+}
+
+.footer__widget__text{
+    margin: 0;
+}
+
+@media screen and (max-width:1280px){
+    .header, .footer{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .book-appoiment__header{
+        padding: .2rem;
+        margin-top: 1.5rem;
+        background-color: var(--accent9-color);
+        border-radius: 2.5px;
+        font-size: 24px;
+    }
+
+    .menu{
+        margin-top: 1.5rem;
+    }
+
+    /* .slideButton{
+        display: none;
+    } */
+
+    .container{
+        align-items: center;
+    }
+
+    .footer__widget{
+        margin-bottom: 1rem;
+    }
+}
