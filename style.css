@@ -1,10 +1,14 @@
-:root{
+:root {
     --max-width: 1288px;
     --min-width: 320px;
     --accent9-color: #00ff95;
+    --font-size-large: 24px;
+    --padding-standard: 1rem 2rem;
 }
 
-*{box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
 html, body {
     height: 100%;
@@ -17,30 +21,35 @@ html, body {
 
 a {
     text-decoration: none;
-    color:white;
+    color: white;
 }
 
+a:hover {
+    color: var(--accent9-color);
+}
 
-.book-appoiment__header{
-    padding: 1rem 2rem;
+.book-appoiment {
+    padding: var(--padding-standard);
     background-color: var(--accent9-color);
-    border-radius: 2.5px;
-    font-size: 24px;
+    border-radius: 2px;
+    font-size: var(--font-size-large);
+    text-align: center;
+    display: inline-block;
 }
 
 .container {
-    height: 102.4vh;
-    display: flexbox;
+    height: 100vh;
+    display: flex;
     flex-direction: column;
     min-width: var(--min-width);
     background-image: url(img/ferrari488black.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    transition: background-image .7s ease-in-out;
+    transition: background-image 0.7s ease-in-out;
 }
 
-.header, .content, .footer{
+.header, .content, .footer {
     width: 100%;
     margin: 16px auto;
     padding: 1.3rem;
@@ -51,32 +60,38 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: -16px;
+    margin-top: 0;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
     font-size: 25px;
     font-weight: bold;
 }
 
-.logo img{
+.logo img {
     width: 120px;
     margin-right: 1rem;
 }
 
-.menu-list{
+.menu-list {
     margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.menu-list__item{
+.menu-list__item {
     display: inline-block;
     margin: 0 .5rem;
     font-size: 20px;
 }
 
-.content{
+.menu-list__item a:hover {
+    color: var(--accent9-color);
+}
+
+.content {
     flex-grow: 1;
     padding-left: 2rem;
     display: flex;
@@ -86,92 +101,99 @@ a {
     position: relative;
 }
 
-.slideButton{
+.slideButton {
     position: absolute;
-    top:40%;
+    top: 40%;
     transform: translateY(-50%);
     font-size: 1.5rem;
     cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    padding: 0.5rem;
 }
 
-.prevSlide{
+.slideButton:hover {
+    color: var(--accent9-color);
+}
+
+.prevSlide {
     left: -1rem;
 }
 
-.nextSlide{
+.nextSlide {
     right: -1rem;
 }
 
-.content__claim{
+.content__claim {
     font-size: 50px;
     color: var(--accent9-color);
     margin: 0;
 }
 
-.content__subclaim{
+.content__subclaim {
     font-size: 25px;
-    margin: .5rem 0;
-    margin-bottom: 2rem;
+    margin: 0.5rem 0 2rem;
 }
 
-.book-appoiment{
-    padding: 1rem 2rem;
-    background-color: var(--accent9-color);
-    border-radius: 2.5px;
-    font-size: 24px;
+.container__footer {
+    background-color: rgba(0, 0, 0, 1);
+    padding: 1.5rem 0;
 }
 
-.container__footer{
-    background-color: rgba(0, 0, 0);
-}
-
-.footer{
+.footer {
     display: flex;
     justify-content: space-between;
-    margin-top: 9.8rem;
+    margin-top: 0.8rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
-.footer__widget{
+.footer__widget {
     font-size: 18.5px;
+    flex: 1;
+    min-width: 200px;
 }
 
-.footer__widget__title{
+.footer__widget__title {
     color: var(--accent9-color);
     font-weight: bold;
-    margin: 0 0 1rem 0;
+    margin: 0 0 1rem;
 }
 
-.footer__widget__text{
+.footer__widget__text {
     margin: 0;
 }
 
-@media screen and (max-width:1280px){
-    .header, .footer{
+.footer__widget__text a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer__widget__text a:hover {
+    color: var(--accent9-color);
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1280px) {
+    .header, .footer {
         flex-direction: column;
         text-align: center;
     }
 
-    .book-appoiment__header{
-        padding: .2rem;
-        margin-top: 1.5rem;
-        background-color: var(--accent9-color);
-        border-radius: 2.5px;
-        font-size: 24px;
-    }
-
-    .menu{
+    .book-appoiment {
         margin-top: 1.5rem;
     }
 
-    /* .slideButton{
-        display: none;
-    } */
+    .menu {
+        margin-top: 1.5rem;
+    }
 
-    .container{
+    .container {
         align-items: center;
     }
 
-    .footer__widget{
+    .footer__widget {
         margin-bottom: 1rem;
     }
 }

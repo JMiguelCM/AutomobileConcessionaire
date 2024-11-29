@@ -17,52 +17,54 @@
   <body class="body__container">
     <main class="container">
       <header class="header">
-        <a href="index.html" class="logo" alt="logo">
-          <img src="icons/carro-deportivo.png" />
+        <a href="index.html" class="logo">
+          <img src="icons/carro-deportivo.png" alt="Automobile Logo" />
           <h1>Automobile</h1>
         </a>
 
-        <nav class="menu">
+        <nav class="menu" role="navigation">
           <ul class="menu-list">
             <li class="menu-list__item"><a href="index.html">Home</a></li>
             <li class="menu-list__item"><a href="#">Features</a></li>
             <li class="menu-list__item"><a href="#">Price</a></li>
             <li class="menu-list__item"><a href="#">Contact</a></li>
             <li class="menu-list__item">
-              <a class="book-appoiment__header" href="#">Book Appoiment</a>
+              <a class="book-appoiment__header" href="#">Book Appointment</a>
             </li>
           </ul>
         </nav>
       </header>
 
-      <article class="content">
-        <a class="slideButton prevSlide">
+      <section class="content">
+        <button class="slideButton prevSlide" aria-label="Previous Slide">
           <i class="fa-solid fa-angle-left fa-2xl" style="color: #ffffff;"></i>
-        </a>
-        <a class="slideButton nextSlide">
+        </button>
+        <button class="slideButton nextSlide" aria-label="Next Slide">
           <i class="fa-solid fa-angle-right fa-2xl" style="color: #ffffff;"></i>
-        </a>
-        <h1 class="content__claim">Your Car Reapairs</h1>
+        </button>
+        <h1 class="content__claim">Your Car Repairs</h1>
         <h2 class="content__subclaim">Visit us for your services</h2>
-        <a class="book-appoiment" href="#">Book Appoiment</a>
-      </article>
+        <a class="book-appoiment" href="#">Book Appointment</a>
+      </section>
 
       <div class="container__footer">
         <footer class="footer">
-          <section class="footer__widget">
+          <address class="footer__widget">
             <h3 class="footer__widget__title">Our Location</h3>
-            <p class="footer__widget__text">66 street Suburb Palmira 1113</p>
-          </section>
-          <section class="footer__widget">
+            <p class="footer__widget__text">66 Street, Suburb, Palmira 1113</p>
+          </address>
+          <address class="footer__widget">
             <h3 class="footer__widget__title">Phone</h3>
-            <p class="footer__widget__text">+57 312-234-4123</p>
-          </section>
-          <section class="footer__widget">
+            <p class="footer__widget__text">
+              <a href="tel:+573216072951">+57 3216072951</a>
+            </p>
+          </address>
+          <address class="footer__widget">
             <h3 class="footer__widget__title">Email</h3>
             <p class="footer__widget__text">
-              automobile.palmira@automobile.com
+              <a href="mailto:jmiguelcardona.moriano@gmail.com">jmiguelcardona.moriano@gmail.com</a>
             </p>
-          </section>
+          </address>
         </footer>
       </div>
     </main>
