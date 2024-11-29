@@ -175,25 +175,89 @@ a:hover {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 1280px) {
-    .header, .footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .book-appoiment {
-        margin-top: 1.5rem;
-    }
-
-    .menu {
-        margin-top: 1.5rem;
+@media screen and (max-width: 768px) {
+    :root {
+        --font-size-large: 18px;
+        --padding-standard: 0.8rem 1.5rem;
     }
 
     .container {
+        padding: 0 1rem;
+        height: auto;
+        background-size: cover;
         align-items: center;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .logo img {
+        width: 80px; /* Reducir el tamaño del logo */
+        margin-right: 0.5rem;
+    }
+
+    .menu-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .menu-list__item {
+        margin: 0.5rem 0;
+        font-size: 16px; /* Reducir el tamaño del texto */
+    }
+
+    .content {
+        align-items: center;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .content__claim {
+        font-size: 32px; /* Reducir tamaño del título */
+    }
+
+    .content__subclaim {
+        font-size: 18px;
+        margin: 1rem 0 2rem;
+    }
+
+    .book-appoiment {
+        padding: var(--padding-standard);
+        font-size: 18px;
+    }
+
+    .slideButton {
+        font-size: 1rem;
+    }
+
+    .container__footer {
+        background-color: transparent; /* Eliminar fondo negro */
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+        text-align: center;
     }
 
     .footer__widget {
         margin-bottom: 1rem;
+        font-size: 16px; /* Ajuste para pantallas pequeñas */
+    }
+
+    .footer__widget__title {
+        font-size: 18px;
     }
 }
+
